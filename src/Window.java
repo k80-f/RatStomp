@@ -30,9 +30,10 @@ public class Window {
         input = scanner.next();
         System.out.println("");
 
-        while(!input.equalsIgnoreCase("C") || input.equalsIgnoreCase("Q")){
+        while (true) {
             if (input.equalsIgnoreCase("C")) {
                 clear();
+                break;
             }
             else if (input.equalsIgnoreCase("Q"))  {
                 System.exit(0);

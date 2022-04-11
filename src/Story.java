@@ -54,7 +54,8 @@ public class Story {
         System.out.println("Choose a number:");
         inputInt = window.inputInt();
 
-        while (inputInt != 1 || inputInt !=2) {
+        // Prompt player to pick an option until existing one is chosen
+        while (true) {
             if (inputInt == 1 ){
                 System.out.println("");
                 System.out.println("You set your horse up in the stable, and head to the front door. \n" +
