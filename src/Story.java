@@ -77,6 +77,7 @@ public class Story {
                 inputInt = window.inputInt();
             }
         }
+        window.cont();
     }
 
     public void rollSceneTwo(){

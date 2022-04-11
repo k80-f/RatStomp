@@ -45,9 +45,7 @@ public class Window {
                 System.out.println("");
             }
         }
-
-        //TODO: Add quit option?
-
+        clear();
     }
 
     // Method that returns user-inputted ints
