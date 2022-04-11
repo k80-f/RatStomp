@@ -9,8 +9,8 @@
 public class Story {
     public Title title = new Title();
     public Window window = new Window();
-    public int inputInt;
-    public String inputString;
+    public int inputInt = -999;
+    public String inputString = " ";
     public String heroName;
     
     public void rollSceneOne(){
@@ -53,22 +53,29 @@ public class Story {
         System.out.println("");
         System.out.println("Choose a number:");
         inputInt = window.inputInt();
-        if (inputInt == 1 ){
-            System.out.println("");
-            System.out.println("");
-            System.out.println("You set your horse up in the stable, and head to the front door. \n" +
-            "\n" +
-            "There's a doormat that says, \"Wipe Yer Feet Or They'll Get Eat\" so you oblige before \n" +
-            "turning the knob.");
-        }
-        else if (inputInt == 2){
-            System.out.println("");
-            System.out.println("");
-            System.out.println("Sadly, climate change is real and the resulting extreme weather causes a flash flood \n"+
-            "that kills you in your sleep. Your horse lives though, because this isn't that kind of game.");
-            title.printGameOver();
 
-            // TODO: Maybe add in option to go back here?
+        while (inputInt != 1 || inputInt !=2) {
+            if (inputInt == 1 ){
+                System.out.println("");
+                System.out.println("You set your horse up in the stable, and head to the front door. \n" +
+                "\n" +
+                "There's a doormat that says, \"Wipe Yer Feet Or They'll Get Eat\" so you oblige before \n" +
+                "turning the knob.");
+                break;
+            }
+            else if (inputInt == 2){
+                System.out.println("");
+                System.out.println("Sadly, climate change is real and the resulting extreme weather causes a flash flood \n"+
+                "that kills you in your sleep. Your horse lives though, because this isn't that kind of game.");
+                title.printGameOver();
+                break;
+
+                // TODO: Maybe add in option to go back here?
+            }
+            else {
+                System.out.println("Choose a number:");
+                inputInt = window.inputInt();
+            }
         }
     }
 
