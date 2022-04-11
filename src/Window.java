@@ -23,18 +23,31 @@ public class Window {
     public void cont(){
         String input = " ";
         
-        // Prompts user to continue until correct input is entered, not case sensitive
-        while(!input.equalsIgnoreCase("C")){
-            System.out.println("");
-            System.out.println("");
-            System.out.println("Enter C To Continue");
-            input = scanner.next();
-            System.out.println("");
+        // Prompts user to continue or quit until correct input is entered, not case sensitive
+        System.out.println("");
+        System.out.println("");
+        System.out.println("Enter C To Continue Or Q To Quit");
+        input = scanner.next();
+        System.out.println("");
+
+        while(!input.equalsIgnoreCase("C") || input.equalsIgnoreCase("Q")){
+            if (input.equalsIgnoreCase("C")) {
+                clear();
+            }
+            else if (input.equalsIgnoreCase("Q"))  {
+                System.exit(0);
+            }
+            else {
+                System.out.println("");
+                System.out.println("");
+                System.out.println("Enter C To Continue Or Q To Quit");
+                input = scanner.next();
+                System.out.println("");
+            }
         }
 
         //TODO: Add quit option?
 
-        clear();
     }
 
     // Method that returns user-inputted ints
