@@ -11,5 +11,7 @@ public class Main {
 
         story.rollSceneOne();
         story.rollSceneTwo();
+        story.rollSceneThree();
+        story.rollSceneFour();
     }
 }
