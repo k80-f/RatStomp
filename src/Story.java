@@ -188,5 +188,6 @@ public class Story {
     public void rollSceneFour(){
         //collect reward
         //ride into sunset
+        title.printYouWon();
     }
 }
