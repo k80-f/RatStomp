@@ -1,7 +1,3 @@
-import java.lang.ref.Cleaner;
-
-import javax.swing.plaf.synth.SynthDesktopIconUI;
-
 /*
 *
 * Class containing the story, calls all other classes except Main.
