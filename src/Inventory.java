@@ -1,10 +1,10 @@
 public class Inventory {
   
-    private static String inv[] = new String ["empty", "empty", "empty", "empty", "empty"];
+    private String inv[] = new String[] {"empty", "empty", "empty", "empty", "empty"};
   
     public void addItemToInv(String name) {
       for (int i = 0; i < inv.length; ++i) {
-        if (inv[i] == empty) {
+        if (inv[i] == "empty") {
           inv[i] = name;
           
           System.out.println("You have added: " + name + ".");
@@ -16,7 +16,7 @@ public class Inventory {
    
    public void printInv() {
      for (String x: inv) {
-       System.out.println(x);
+      System.out.print("[" + x + "] ");
      }
    }
   
