@@ -10,6 +10,7 @@ public class Story {
     public Title title = new Title();
     public Window window = new Window();
     public Player player = new Player();
+    public Inventory inventory = new Inventory();
     public int inputInt = -999;
     public String inputString = " ";
     public String heroName;
@@ -150,8 +151,8 @@ public class Story {
         window.cont();
 
         System.out.println("Enter Your Name:");
-        // player.setName(window.inputString());
-        // heroName = player.getName();
+        player.setName(window.inputString());
+        heroName = player.getName();
         window.cont();
 
         // TODO: add hero name
@@ -175,15 +176,71 @@ public class Story {
     }
 
     public void rollSceneThree(){
-        //go down to basement
-        //choose weapon
-        //generate number of rats & stats
+        System.out.println("The stairs creak as you descend into the darkness. \n" +
+        "Towards the bottom is a lantern that you flip on, and it floods most of the small room with light.");
+        window.cont();
+
+        System.out.println("It is your standard tavern basement, with barrels and crates littered \n" +
+        "around and a few dusty shelves full of old supplies. The not standard part is \n" +
+        "the pairs of glowing red eyes staring back at you from corners the light can’t quite reach.");
+        window.cont();
+
+        System.out.println(heroName + ": Alrighty let’s see how bad my day is about to be. How many of you are there? 1, 2…. ");
+        //generate rat count
+        window.cont();
+
+        System.out.println(heroName + ": {{ratcount}} rats, super. And which weapon did I bring again?");
+        inventory.addItemToInv(window.inputString());
+        window.cont();
+
+        System.out.println(heroName + ": My " + "{{weapon}}, really? Well let's see how this goes.");
+        System.out.println("A rat leaps from the shadows, and you’re able to see it in all its glory. \n" +
+        "\n" +
+        "Giant, spooky, gross glory.");
+        window.cont();
+
         //battle
     }
 
     public void rollSceneFour(){
         //collect reward
+        System.out.println("As you kill the last rat you look down and see it dropped a sack!");
+        System.out.println("Like any good adventurer you reach down, and pick it up.");
+        System.out.println("As you lift the cloth sack into your hand and open it you see a large diamond worth enough \n" +
+        "to pay for everything you will ever need");
+        System.out.println("You exit the basement and head back up to the tavern to collect your reward from the Barkeep");
+        System.out.println("Right as you walk through the door the Barkeep has a look of disbelief");
+        System.out.println("Barkeep: I... I... uh... didn't think you would actually make it!?");
+        System.out.println("{{name}}: Well it wouldn't make a good story if I died now would it?");
+        System.out.println("Barkeep: Well a deal is a deal. Here are your rewards");
+        window.cont();
+         
         //ride into sunset
+        System.out.println("The Barkeep hands you a small sack of gold coins");
+        System.out.println("He offers you a night at the inn.");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("1 Stay the night at the inn");
+        System.out.println("2 Leave and take your chances with the night");
+        System.out.println("");
+        System.out.println("Choose a number:");
+        System.out.println("");
+        inputInt = window.inputInt();
+        
+        while (true) {
+            if (inputInt == 1) {
+               System.out.println("You find a maiden awaiting your arrival in the room...");
+               break;
+            }
+            else if (inputInt == 2) {
+               System.out.println("The Barkeep instead gives you a horse and you ride off into the sunset with your newfound fame and fortune...");
+               break;
+            }
+            else {
+               System.out.println("Choose a number:");
+               inputInt = window.inputInt();
+            }
         title.printYouWon();
-    }
+       }
+   } 
 }
