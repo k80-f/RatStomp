@@ -1,41 +1,43 @@
+/*
+Ellis Schmidt
+04/20/22 
+Rat Stomp
+Methods that create and allow user to interact with Inventory
+*/
+
+//Invetory Class
 public class Inventory {
   
-    private String inv[] = new String[] {"empty", "empty", "empty", "empty", "empty"};
+  private String inv[] = new String[] {"empty", "empty", "empty", "empty", "empty"};
   
-    public void addItemToInv(String name) {
-      for (int i = 0; i < inv.length; ++i) {
-        if (inv[i] == "empty") {
-          inv[i] = name;
-          
-          System.out.println("You have added: " + name + ".");
-          return;
-        }
-      }
-     System.out.println("You have no room in your inventory.");
-   }
-   
-   public void printInv() {
-     for (String x: inv) {
-      System.out.print("[" + x + "] ");
-     }
-   }
-  
-   public void removeItemFromInv(String name) {
-     for (int i = 0; i < inv.length; i++) {
-       if (inv[i].equals(name)) {
-         inv[i] = "empty";
-       }
-     }
-     System.out.println("You have removed: " + name + ".");
-   }
-  
-  public void useItemFromInv(String name) {
-    for (int i = 0; i < inv.length; i++) {
-      if (inv[i].equals(name)) {
-        //Uses item?
+  //Adds item to inventory  
+  public void addItemToInv(String name) {
+    for (int i = 0; i < inv.length; ++i) {
+      if (inv[i] == "empty") {
+        inv[i] = name;
+        
+        System.out.println("You have added: " + name + ".");
+        return;
       }
     }
-    System.out.println("You used " + name + ".");
-  }
-    
+   System.out.println("You have no room in your inventory.");
+ }
+ 
+ //Prints out all items in inventory
+ public void printInv() {
+   for (String x: inv) {
+    System.out.print("[" + x + "] ");
+   }
+ }
+ 
+ //Removes Item from Inventory
+ public void removeItemFromInv(String name) {
+   for (int i = 0; i < inv.length; i++) {
+     if (inv[i].equals(name)) {
+       inv[i] = "empty";
+     }
+   }
+   System.out.println("You have removed: " + name + ".");
+ }
+  
 }
