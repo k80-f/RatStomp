@@ -58,6 +58,7 @@ public class Window {
     // Method that returns user-inputted strings
     public String inputString(){
         String input = scanner.nextLine();
+        scanner.nextLine();
         return input;
     }
 }

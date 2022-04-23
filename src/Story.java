@@ -11,8 +11,7 @@ public class Story {
     public Window window = new Window();
     public Player player = new Player();
     public Inventory inventory = new Inventory();
-    public int inputInt = -999;
-    public String inputString = " ";
+    public int inputInt;
     public String heroName;
     
     public void rollSceneOne(){
@@ -59,7 +58,7 @@ public class Story {
         // Prompt player to pick an option until existing one is chosen
         while (true) {
             if (inputInt == 1 ){
-                System.out.println("");
+                window.clear();
                 System.out.println("You set your horse up in the stable, and head to the front door. \n" +
                 "\n" +
                 "There's a doormat that says, \"Wipe Yer Feet Or They'll Get Eat\" so you oblige before \n" +
@@ -67,7 +66,7 @@ public class Story {
                 break;
             }
             else if (inputInt == 2){
-                System.out.println("");
+                window.clear();
                 System.out.println("Sadly, climate change is real and the resulting extreme weather causes a flash flood \n"+
                 "that kills you in your sleep. Your horse lives though, because this isn't that kind of game.");
                 title.printGameOver();
@@ -106,6 +105,7 @@ public class Story {
                 break;
             }
             else if (inputInt == 2) {
+                window.clear();
                 System.out.println("You march up to the biggest and meanest looking sonofa in the room and attempt \n" +
                 "to snatch the tankard from his hand. The tankard, of course, does not budge an inch, and the man \n" +
                 "stands up, peers down at you from several feet above your head, \n" +
@@ -148,18 +148,18 @@ public class Story {
         "you help me with a little problem. What's your name?");
         System.out.println("");
         System.out.println("Adventurer: Oh, uhh");
-        window.cont();
+        System.out.println("");
 
         System.out.println("Enter Your Name:");
         player.setName(window.inputString());
         heroName = player.getName();
+        window.clear();
+        System.out.println(heroName);
+
+        System.out.println("Barkeep: Well " + heroName + ", my name is Murray and this here tavern is cursed.");
         window.cont();
 
-        // TODO: add hero name
-        System.out.println("Barkeep: Well {{name}}, my name is Murray and this here tavern is cursed.");
-        window.cont();
-
-        System.out.println("{{name}}: I don't remember curses being part of this trope but go on.");
+        System.out.println(heroName + ": I don't remember curses being part of this trope but go on.");
         window.cont();
 
         System.out.println("Murray the Barkeep: Well, all you need to know is I might have served a bog witch a stale bit of bread \n" +
@@ -169,7 +169,7 @@ public class Story {
         System.out.println("You examine your dirty clothes, empty stomach, and even emptier pockets and sigh.");
         window.cont();
 
-        System.out.println("{{name}}: Let's get it over with!");
+        System.out.println(heroName + ": Let's get it over with!");
         window.cont();
 
         System.out.println("Murray points to the basement door and tries not to look too worried as you walk away.");
@@ -190,10 +190,11 @@ public class Story {
         window.cont();
 
         System.out.println(heroName + ": {{ratcount}} rats, super. And which weapon did I bring again?");
-        inventory.addItemToInv(window.inputString());
+        String weapon = window.inputString();
+        inventory.addItemToInv(weapon);
         window.cont();
 
-        System.out.println(heroName + ": My " + "{{weapon}}, really? Well let's see how this goes.");
+        System.out.println(heroName + ": My " + weapon + ", really? Well let's see how this goes.");
         System.out.println("A rat leaps from the shadows, and you’re able to see it in all its glory. \n" +
         "\n" +
         "Giant, spooky, gross glory.");
@@ -205,13 +206,23 @@ public class Story {
     public void rollSceneFour(){
         //collect reward
         System.out.println("As you kill the last rat you look down and see it dropped a sack!");
+        window.cont();
         System.out.println("Like any good adventurer you reach down, and pick it up.");
+        window.cont();
+
         System.out.println("As you lift the cloth sack into your hand and open it you see a large diamond worth enough \n" +
         "to pay for everything you will ever need");
+        System.out.println("");
         System.out.println("You exit the basement and head back up to the tavern to collect your reward from the Barkeep");
+        window.cont();
+
         System.out.println("Right as you walk through the door the Barkeep has a look of disbelief");
+        System.out.println("");
         System.out.println("Barkeep: I... I... uh... didn't think you would actually make it!?");
-        System.out.println("{{name}}: Well it wouldn't make a good story if I died now would it?");
+        window.cont();
+
+        System.out.println(heroName + ": Well it wouldn't make a good story if I died now would it?");
+        System.out.println("");
         System.out.println("Barkeep: Well a deal is a deal. Here are your rewards");
         window.cont();
          
