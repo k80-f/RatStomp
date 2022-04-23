@@ -5,14 +5,16 @@
 * @authors Ellis Schmidt, Joshua Johnson, Katharine Frechette
 *
 */
+import java.util.Scanner;
 
 public class Story {
     public Title title = new Title();
     public Window window = new Window();
     public Player player = new Player();
     public Inventory inventory = new Inventory();
+    public Scanner scnr = new Scanner(System.in);
     public int inputInt;
-    public String heroName;
+    //private String player.getName();
     
     public void rollSceneOne(){
         title.printGameTitle();
@@ -53,7 +55,7 @@ public class Story {
         System.out.println("2 Take my chances and set up camp outside for the night. Who knows who or what is inside this place.");
         System.out.println("");
         System.out.println("Choose a number:");
-        inputInt = window.inputInt();
+        inputInt = scnr.nextInt();
 
         // Prompt player to pick an option until existing one is chosen
         while (true) {
@@ -74,7 +76,7 @@ public class Story {
             }
             else {
                 System.out.println("Choose a number:");
-                inputInt = window.inputInt();
+                inputInt = scnr.nextInt();
             }
         }
         window.cont();
@@ -94,7 +96,7 @@ public class Story {
         System.out.println("");
         System.out.println("Choose a number:");
         System.out.println("");
-        inputInt = window.inputInt();
+        inputInt = scnr.nextInt();
 
         /* Prompt player to pick an option until existing one is chosen
         * User will have to do option 1 no matter what, so loop immediately breaks if that is chosen.
@@ -132,7 +134,7 @@ public class Story {
             }
             else {
                 System.out.println("Choose a number:");
-                inputInt = window.inputInt();
+                inputInt = scnr.nextInt();
             }
         }
 
@@ -151,15 +153,18 @@ public class Story {
         System.out.println("");
 
         System.out.println("Enter Your Name:");
-        player.setName(window.inputString());
-        heroName = player.getName();
+        player.setName(scnr.nextLine());
+        scnr.nextLine();
+        // player.setName(player.getName());
         window.clear();
-        System.out.println(heroName);
 
-        System.out.println("Barkeep: Well " + heroName + ", my name is Murray and this here tavern is cursed.");
+        //testing, remomve
+        System.out.printf("Hi %s how are you", player.getName());
+
+        System.out.println("Barkeep: Well " + player.getName() + ", my name is Murray and this here tavern is cursed.");
         window.cont();
 
-        System.out.println(heroName + ": I don't remember curses being part of this trope but go on.");
+        System.out.println(player.getName() + ": I don't remember curses being part of this trope but go on.");
         window.cont();
 
         System.out.println("Murray the Barkeep: Well, all you need to know is I might have served a bog witch a stale bit of bread \n" +
@@ -169,7 +174,7 @@ public class Story {
         System.out.println("You examine your dirty clothes, empty stomach, and even emptier pockets and sigh.");
         window.cont();
 
-        System.out.println(heroName + ": Let's get it over with!");
+        System.out.println(player.getName() + ": Let's get it over with!");
         window.cont();
 
         System.out.println("Murray points to the basement door and tries not to look too worried as you walk away.");
@@ -185,16 +190,16 @@ public class Story {
         "the pairs of glowing red eyes staring back at you from corners the light can’t quite reach.");
         window.cont();
 
-        System.out.println(heroName + ": Alrighty let’s see how bad my day is about to be. How many of you are there? 1, 2…. ");
+        System.out.println(player.getName() + ": Alrighty let’s see how bad my day is about to be. How many of you are there? 1, 2…. ");
         //generate rat count
         window.cont();
 
-        System.out.println(heroName + ": {{ratcount}} rats, super. And which weapon did I bring again?");
-        String weapon = window.inputString();
+        System.out.println(player.getName() + ": {{ratcount}} rats, super. And which weapon did I bring again?");
+        String weapon = scnr.nextLine();
         inventory.addItemToInv(weapon);
         window.cont();
 
-        System.out.println(heroName + ": My " + weapon + ", really? Well let's see how this goes.");
+        System.out.println(player.getName() + ": My " + weapon + ", really? Well let's see how this goes.");
         System.out.println("A rat leaps from the shadows, and you’re able to see it in all its glory. \n" +
         "\n" +
         "Giant, spooky, gross glory.");
@@ -221,7 +226,7 @@ public class Story {
         System.out.println("Barkeep: I... I... uh... didn't think you would actually make it!?");
         window.cont();
 
-        System.out.println(heroName + ": Well it wouldn't make a good story if I died now would it?");
+        System.out.println(player.getName() + ": Well it wouldn't make a good story if I died now would it?");
         System.out.println("");
         System.out.println("Barkeep: Well a deal is a deal. Here are your rewards");
         window.cont();
@@ -236,7 +241,7 @@ public class Story {
         System.out.println("");
         System.out.println("Choose a number:");
         System.out.println("");
-        inputInt = window.inputInt();
+        inputInt = scnr.nextInt();
         
         while (true) {
             if (inputInt == 1) {
@@ -249,7 +254,7 @@ public class Story {
             }
             else {
                System.out.println("Choose a number:");
-               inputInt = window.inputInt();
+               inputInt = scnr.nextInt();
             }
         title.printYouWon();
        }
