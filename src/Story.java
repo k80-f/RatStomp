@@ -155,11 +155,7 @@ public class Story {
         System.out.println("Enter Your Name:");
         player.setName(scnr.nextLine());
         scnr.nextLine();
-        // player.setName(player.getName());
         window.clear();
-
-        //testing, remomve
-        System.out.printf("Hi %s how are you", player.getName());
 
         System.out.println("Barkeep: Well " + player.getName() + ", my name is Murray and this here tavern is cursed.");
         window.cont();
