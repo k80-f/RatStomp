@@ -8,3 +8,5 @@ To play, execute Main and follow the prompts.
 Beware, adventurer, as not all are destined for a happily ever after...
 
 AUTHORS: Joshua Johnson, Ellis Schmidt, Katharine Frechette
+
+NOTE: This project is too big for jGrasp. Created in Visual Studio Code
