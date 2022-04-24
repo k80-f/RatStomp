@@ -232,8 +232,8 @@ public class Story {
             rollSceneFour();
         } else if (battle == 3) {
             System.out.println("");
-            System.out.println(
-                    "You've run away! You collect no reward and everyone calls you a weenie for the rest of your life. How embarrassing.");
+            System.out.println("You've run away! You collect no reward and everyone calls you a weenie for the rest of your life. How embarrassing.");
+            
             title.printGameOver();
             exit(0);
         }
