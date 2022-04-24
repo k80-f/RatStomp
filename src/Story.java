@@ -163,7 +163,7 @@ public class Story {
         System.out.println("Adventurer: Oh, uhh");
         System.out.println("");
 
-        System.out.println("Enter Your Name:");
+        System.out.println("###Enter Your Name:###");
         player.setName(window.inputString());
         heroName = player.getName();
         window.clear();
