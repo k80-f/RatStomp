@@ -133,6 +133,8 @@ public class Story {
                 window.cont();
 
                 System.out.println("Adventurer: I thought this would be a fighting game.");
+                System.out.println("");
+                inventory.addItemToInv("Copper Coins");
                 window.cont();
 
                 System.out.println("You turn back to the rest of the room. \n" +
@@ -147,8 +149,7 @@ public class Story {
             }
         }
 
-        System.out.println(
-                "You mosey over to the bar, which is empty of patrons except for two old men slumped in their stools,  \n" +
+        System.out.println("You mosey over to the bar, which is empty of patrons except for two old men slumped in their stools, \n" +
                         "snoring. Without looking up from polishing a glass, the barkeep, a small wiry man with gray hair and \n" +
                         "glasses says, \"What'll you have?\"");
         window.cont();
@@ -238,6 +239,8 @@ public class Story {
         System.out.println("As you lift the cloth sack into your hand and open it you see a large diamond  \n" +
                         "worth enough to pay for everything you will ever need! Sick.");
         System.out.println("");
+        inventory.addItemToInv("Diamond");
+        System.out.println("");
         System.out.println("You exit the basement and head back up to the tavern to collect your reward from Murray the Barkeep.");
         window.cont();
 
@@ -253,6 +256,9 @@ public class Story {
 
         // ride into sunset
         System.out.println("Murray the Barkeep hands you a small sack of gold coins.");
+        System.out.println("");
+        inventory.addItemToInv("Gold Coins");
+        System.out.println();
         System.out.println("He also offers you a night at the inn, if you'd like.");
         System.out.println("");
         System.out.println("");
@@ -267,7 +273,7 @@ public class Story {
         while (true) {
             if (inputInt == 1) {
                 System.out.println("");
-                System.out.println("You wash the demon rat off your shirt and party all night with the rest of the tavern folk. \n" +
+                System.out.println("You wash the demon rat out of your hair and party all night with the rest of the tavern folk. \n" +
                                 "One of them even ends up being the love of your life, because we love a happy ending...");
                 break;
             } else if (inputInt == 2) {
