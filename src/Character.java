@@ -6,16 +6,16 @@ Program Purpose: To set up, initialize, and allow user to update information for
 */
 
 public class Character {  
-    String name;  
-    int healthPoints; //health points
-    int attackPoints; //attack points
-    boolean alive; 
+    private String name;  
+    private int healthPoints; //health points
+    private int attackPoints; //attack points
+    private boolean alive; 
     
    public Character() {  // initialize private fields
-      name = "Randy"; 
-      healthPoints = 100; 
-      attackPoints = 20; 
-      alive = true;  
+      this.name = "Randy the Rat"; 
+      this.healthPoints = 100; 
+      this.attackPoints = 20; 
+      this.alive = true;  
    }
    public Character(String name, int healthPoints, int attackPoints, boolean alive) { // Allows set of private fields. 
       this.name = name; 
@@ -32,12 +32,15 @@ public class Character {
     public int getHP(){
        return healthPoints; 
    }
-    public void setHP(int dmg){ //dmg name can be anything? Correct? 
-       this.healthPoints = this.healthPoints - dmg;
+    public void setHP(int health){        //dmg name can be anything? Correct? 
+       this.healthPoints = health;
    }
     public int getAP(){
        return attackPoints; 
    }
+    public void setAP(int aP){
+       this.attackPoints = aP;
+    }
     public boolean isAlive() {
        return alive; 
    }   
