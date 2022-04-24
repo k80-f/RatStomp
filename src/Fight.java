@@ -69,7 +69,7 @@ public class Fight {
       int ratHealth = ratH;
       String ratName = ratN;
       int ratDmg = ratA;
-      int choice = -999;
+      int choice = 0;
       int sword;
       int arrow;
       int num1 = 1;
