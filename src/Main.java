@@ -9,9 +9,9 @@ public class Main {
     public static void main(String[] args){
         Story story = new Story();
 
-        story.rollSceneOne();
-        story.rollSceneTwo();
+        //story.rollSceneOne();
+        //story.rollSceneTwo();
         story.rollSceneThree();
-        story.rollSceneFour();
+        //story.rollSceneFour();
     }
 }
