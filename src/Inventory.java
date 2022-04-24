@@ -5,7 +5,7 @@ Rat Stomp
 Methods that create and allow user to interact with Inventory
 */
 
-//Invetory Class
+//Inventory Class
 public class Inventory {
   
   private String inv[] = new String[] {"empty", "empty", "empty", "empty", "empty"};

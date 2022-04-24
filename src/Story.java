@@ -6,15 +6,21 @@
 *
 */
 import java.util.Scanner;
+import static java.lang.System.exit;
+import java.util.Random;
 
 public class Story {
     public Title title = new Title();
     public Window window = new Window();
-    public Player player = new Player();
+    public Character player = new Character();
+    public Character rat = new Character(); 
     public Inventory inventory = new Inventory();
     public Scanner scnr = new Scanner(System.in);
-    public int inputInt;
-    //private String player.getName();
+    public int inputInt = -999;
+    public String heroName;
+    public String weapon;
+    public Fight fight = new Fight(); 
+    Random rand = new Random();
     
     public void rollSceneOne(){
         title.printGameTitle();
@@ -153,24 +159,24 @@ public class Story {
         System.out.println("");
 
         System.out.println("Enter Your Name:");
-        player.setName(scnr.nextLine());
-        scnr.nextLine();
+        player.setName(window.inputString());
+        heroName = player.getName();
         window.clear();
 
-        System.out.println("Barkeep: Well " + player.getName() + ", my name is Murray and this here tavern is cursed.");
+        System.out.println("Barkeep: Well " + heroName + ", my name is Murray and this here tavern is cursed.");
         window.cont();
 
-        System.out.println(player.getName() + ": I don't remember curses being part of this trope but go on.");
+        System.out.println(heroName + ": I don't remember curses being part of this trope but go on.");
         window.cont();
 
         System.out.println("Murray the Barkeep: Well, all you need to know is I might have served a bog witch a stale bit of bread \n" +
-        "and since we don't have yelp in this universe, she filled my basement with gigantic demon rats. I need an adventurer \n" +
+        "and since we don't have Yelp in this universe, she filled my basement with gigantic demon rats. I need an adventurer \n" +
         "such as yourself to clear them out.");
         System.out.println("");
         System.out.println("You examine your dirty clothes, empty stomach, and even emptier pockets and sigh.");
         window.cont();
 
-        System.out.println(player.getName() + ": Let's get it over with!");
+        System.out.println(heroName + ": Let's get it over with!");
         window.cont();
 
         System.out.println("Murray points to the basement door and tries not to look too worried as you walk away.");
@@ -183,25 +189,28 @@ public class Story {
 
         System.out.println("It is your standard tavern basement, with barrels and crates littered \n" +
         "around and a few dusty shelves full of old supplies. The not standard part is \n" +
-        "the pairs of glowing red eyes staring back at you from corners the light can’t quite reach.");
+        "the pair of glowing red eyes staring back at you from a corner the light can’t quite reach.");
         window.cont();
 
-        System.out.println(player.getName() + ": Alrighty let’s see how bad my day is about to be. How many of you are there? 1, 2…. ");
-        //generate rat count
+        System.out.println(heroName + ": Alrighty let’s see how bad my day is about to be.");
         window.cont();
 
-        System.out.println(player.getName() + ": {{ratcount}} rats, super. And which weapon did I bring again?");
-        String weapon = scnr.nextLine();
-        inventory.addItemToInv(weapon);
-        window.cont();
-
-        System.out.println(player.getName() + ": My " + weapon + ", really? Well let's see how this goes.");
         System.out.println("A rat leaps from the shadows, and you’re able to see it in all its glory. \n" +
         "\n" +
         "Giant, spooky, gross glory.");
         window.cont();
 
-        //battle
+      if(fight.fightLoop(player.getName(), player.getHP(),rat.getName(), rat.getHP(),rat.getAP()) == 1) { ///Does this pass information of player into fight method? 
+         System.out.println("\tGAME OVER!"); 
+         exit(0);    
+      } 
+      else if(fight.fightLoop(player.getName(),player.getHP(),rat.getName(), rat.getHP(), rat.getAP()) == 3){   
+          System.out.println("\tYou've ran away! You collect no reward!");
+          exit(0);  
+      }
+      else {
+          //player.setHP(player.getHP-dmgTaken); //**Need to figure out how to update players health outside of loop. 
+      }  
     }
 
     public void rollSceneFour(){
