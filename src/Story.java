@@ -163,7 +163,7 @@ public class Story {
         System.out.println("Adventurer: Oh, uhh");
         System.out.println("");
 
-        System.out.println("###Enter Your Name:###");
+        System.out.println("###Enter Your Name###");
         player.setName(window.inputString());
         heroName = player.getName();
         window.clear();
@@ -273,8 +273,7 @@ public class Story {
         while (true) {
             if (inputInt == 1) {
                 window.clear();
-                System.out.println("You wash the demon rat out of your hair and party all night with the rest of the tavern folk. \n" +
-                                "One of them even ends up being the love of your life, because we love a happy ending...");
+                System.out.println("You wash the demon rat out of your hair and head up to you room. A maiden is there waiting for you...");
                 break;
             } else if (inputInt == 2) {
                 window.clear();
