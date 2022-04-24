@@ -23,24 +23,32 @@ public class Character {
       this.attackPoints = attackPoints; 
       this.alive = alive;
    }
+
+   // Getter and Setter for name
    public void setName(String inputName) {
       this.name = inputName;
    }
     public String getName(){
        return name; 
    }
+
+   // Getter and Setter for Hit Points
     public int getHP(){
        return healthPoints; 
    }
-    public void setHP(int health){        //dmg name can be anything? Correct? 
+    public void setHP(int health){
        this.healthPoints = health;
    }
+
+   // Getter and Setter for Attack Points
     public int getAP(){
        return attackPoints; 
    }
     public void setAP(int aP){
        this.attackPoints = aP;
     }
+
+    // Boolean for if player is alive
     public boolean isAlive() {
        return alive; 
    }   
