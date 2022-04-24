@@ -1,4 +1,6 @@
 /*
+*
+* This is a text-based adventure game!
 * Main method that runs the game. Cycles through each story chapter,
 * pulling from the Story class. Stops when user has won, dies, or quits.
 *
