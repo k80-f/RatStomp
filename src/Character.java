@@ -2,7 +2,7 @@
 Name: Joshua Johnson
 date: 4/20/22
 Program Name: Rat Stomp - Public Class Character
-Program Purpose: To set up, initialize, and allow user to update information for player characters and rat characters. Additonally, houses the fight class which determines the outcome of player vs. rat confrontations. 
+Program Purpose: To set up, initialize, and allow user to update information for player characters and rat characters.  
 */
 
 public class Character {  
@@ -42,12 +42,3 @@ public class Character {
        return alive; 
    }   
 }
-           
-          
-        
-  
-  
-  
-   
-
-
