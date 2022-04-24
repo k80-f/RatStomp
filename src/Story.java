@@ -74,19 +74,19 @@ public class Story {
                         "\n" +
                         "There's a doormat that says, \"Wipe Yer Feet Or They'll Get Eat\" so you oblige before \n" +
                         "turning the knob.");
+                window.clear();
                 break;
             } else if (inputInt == 2) {
                 window.clear();
                 System.out.println( "Sadly, climate change is real and the resulting extreme weather causes a flash flood \n" +
                                 "that kills you in your sleep. Your horse lives though, because this isn't that kind of game.");
                 title.printGameOver();
-                break;
+                exit(0);;
             } else {
                 System.out.println("Choose A Number:");
                 inputInt = scnr.nextInt();
             }
         }
-        window.cont();
     }
 
     // Scene two, learn of and accept quest
@@ -216,7 +216,7 @@ public class Story {
         } else if (battle == 2) {
             rollSceneFour();
         } else if (battle == 3) {
-            System.out.println("");
+            window.clear();
             System.out.println("You've run away! You collect no reward and everyone calls you a weenie for the rest of your life. How embarrassing.");
 
             title.printGameOver();
@@ -272,12 +272,12 @@ public class Story {
         // Loop through options until user selects one that exists
         while (true) {
             if (inputInt == 1) {
-                System.out.println("");
+                window.clear();
                 System.out.println("You wash the demon rat out of your hair and party all night with the rest of the tavern folk. \n" +
                                 "One of them even ends up being the love of your life, because we love a happy ending...");
                 break;
             } else if (inputInt == 2) {
-                System.out.println("");
+                window.clear();
                 System.out.println("Murray the Barkeep wishes you well and you ride off into the sunset with your newfound fame and fortune...");
                 break;
             } else {

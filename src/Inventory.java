@@ -16,7 +16,7 @@ public class Inventory {
       if (inv[i] == "empty") {
         inv[i] = name;
         
-        System.out.println("You have added: " + name + ".");
+        System.out.println("You added " + name + " to your inventory.");
         return;
       }
     }
@@ -37,7 +37,7 @@ public class Inventory {
        inv[i] = "empty";
      }
    }
-   System.out.println("You have removed: " + name + ".");
+   System.out.println("You removed " + name + " from your inventory.");
  }
   
 }
