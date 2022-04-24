@@ -206,16 +206,16 @@ public class Story {
                 "Giant, spooky, gross glory.");
         window.cont();
 
-        // Start battle, return outcome 1-3
-        int battle = fight.fightLoop(player.getName(), player.getHP(), rat.getName(), rat.getHP(), rat.getAP());
+        // Start fight, return outcome 1-3
+        int fightResult = fight.fightLoop(player.getName(), player.getHP(), rat.getName(), rat.getHP(), rat.getAP());
 
-        // Generate ending based on battle outcome
-        if (battle == 1) {
+        // Generate ending based on fightResult outcome
+        if (fightResult == 1) {
             title.printGameOver();
             exit(0);
-        } else if (battle == 2) {
+        } else if (fightResult == 2) {
             rollSceneFour();
-        } else if (battle == 3) {
+        } else if (fightResult == 3) {
             window.clear();
             System.out.println("You've run away! You collect no reward and everyone calls you a weenie for the rest of your life. How embarrassing.");
 
