@@ -233,7 +233,7 @@ public class Story {
         } else if (battle == 3) {
             System.out.println("");
             System.out.println("You've run away! You collect no reward and everyone calls you a weenie for the rest of your life. How embarrassing.");
-            
+
             title.printGameOver();
             exit(0);
         }
@@ -244,6 +244,8 @@ public class Story {
         // collect reward
         System.out.println("");
         System.out.println("");
+        System.out.println(heroName + ": Oh wow I did it!");
+        window.cont();
         System.out.println("As the rat crumbles into demon dust, you look down and see it dropped a sack!");
         window.cont();
         System.out.println("Like any good adventurer, you reach down and pick it up.");
@@ -272,8 +274,8 @@ public class Story {
         System.out.println("He also offers you a night at the inn, if you'd like.");
         System.out.println("");
         System.out.println("");
-        System.out.println("1 Stay the night at the inn");
-        System.out.println("2 Leave and take your chances with the night");
+        System.out.println("\t1 Stay the night at the inn");
+        System.out.println("\t2 Leave and take your chances with the night");
         System.out.println("");
         System.out.println("Choose A Number:");
         System.out.println("");
