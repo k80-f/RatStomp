@@ -38,7 +38,6 @@ public class Story {
 
         System.out.println("Thunder claps above you. A thick wall of rain blocks all but \n" +
                 "the few feet in front of your horse as you charge down what you can only hope is a road.");
-
         System.out.println("");
 
         System.out.println("It has been several days of no rest, little water, \n" +
@@ -62,8 +61,7 @@ public class Story {
         System.out.println("##This is a text adventure RPG! Choose a number and learn your fate!##");
         System.out.println("");
         System.out.println("\t1 Stable my horse and see if they have room and drink for a weary traveler");
-        System.out.println(
-                "\t2 Take my chances and set up camp outside for the night. Who knows who or what is inside this place.");
+        System.out.println("\t2 Take my chances and set up camp outside for the night. Who knows who or what is inside this place.");
         System.out.println("");
         System.out.println("Choose A Number:");
         inputInt = scnr.nextInt();
@@ -79,8 +77,7 @@ public class Story {
                 break;
             } else if (inputInt == 2) {
                 window.clear();
-                System.out.println(
-                        "Sadly, climate change is real and the resulting extreme weather causes a flash flood \n" +
+                System.out.println( "Sadly, climate change is real and the resulting extreme weather causes a flash flood \n" +
                                 "that kills you in your sleep. Your horse lives though, because this isn't that kind of game.");
                 title.printGameOver();
                 break;
@@ -94,8 +91,7 @@ public class Story {
 
     // Scene two, learn of and accept quest
     public void rollSceneTwo() {
-        System.out.println(
-                "Inside, surprisingly, is a beautiful warm tavern. Roaring cozy fireplaces, smiling servers \n" +
+        System.out.println("Inside, surprisingly, is a beautiful warm tavern. Roaring cozy fireplaces, smiling servers \n" +
                         "carrying cartoonishly large and ornate beer tankardss, and comfortable patrons \n" +
                         "lounging around large wooden tables.");
         window.cont();
@@ -112,8 +108,7 @@ public class Story {
 
         /*
          * Prompt player to pick an option until existing one is chosen
-         * User will have to do option 1 no matter what, so loop immediately breaks if
-         * that is chosen.
+         * User will have to do option 1 no matter what, so loop immediately breaks if that's chosen
          */
         while (true) {
             if (inputInt == 1) {
@@ -123,8 +118,7 @@ public class Story {
             else if (inputInt == 2) {
                 window.clear();
                 System.out.println("You march up to the biggest and meanest looking sonofa in the room and attempt \n" +
-                        "to snatch the tankard from his hand. The tankard, of course, does not budge an inch, and the man \n"
-                        +
+                        "to snatch the tankard from his hand. The tankard, of course, does not budge an inch, and the man \n" +
                         "stands up, peers down at you from several feet above your head, \n" +
                         "and raises a closed fist…");
                 window.cont();
@@ -133,11 +127,8 @@ public class Story {
                         "with a few copper coins in the middle of his palm. Deeply confused, you look up at the man.");
                 window.cont();
 
-                System.out.println(
-                        "Man: I threw my youth away robbing strangers, child. Stole everything I could get my hands on,\n"
-                                +
-                                "but was only ever left with hate in my heart and no friends to call when I needed them. \n"
-                                +
+                System.out.println("Man: I threw my youth away robbing strangers, child. Stole everything I could get my hands on,\n" +
+                                "but was only ever left with hate in my heart and no friends to call when I needed them. \n" +
                                 "This is not the way. Here, buy yourself a drink. Choose a different path next time.");
                 window.cont();
 
@@ -157,19 +148,15 @@ public class Story {
         }
 
         System.out.println(
-                "You mosey over to the bar, which is empty of patrons except for two old men slumped in their stools,  \n"
-                        +
-                        "snoring. Without looking up from polishing a glass, the barkeep, a small wiry man with gray hair and \n"
-                        +
+                "You mosey over to the bar, which is empty of patrons except for two old men slumped in their stools,  \n" +
+                        "snoring. Without looking up from polishing a glass, the barkeep, a small wiry man with gray hair and \n" +
                         "glasses says, \"What'll you have?\"");
         window.cont();
 
-        System.out.println(
-                "But then he looks up and sees your weapons. He looks you in the eye and sets down the glass...");
+        System.out.println("But then he looks up and sees your weapons. He looks you in the eye and sets down the glass...");
         window.cont();
 
-        System.out
-                .println("Barkeep: You can have all the beer and food you want plus coin and a room to sleep in if \n" +
+        System.out.println("Barkeep: You can have all the beer and food you want plus coin and a room to sleep in if \n" +
                         "you help me with a little problem. What's your name?");
         System.out.println("");
         System.out.println("Adventurer: Oh, uhh");
@@ -186,11 +173,8 @@ public class Story {
         System.out.println(heroName + ": I don't remember curses being part of this trope but go on.");
         window.cont();
 
-        System.out.println(
-                "Murray the Barkeep: Well, all you need to know is I might have served a bog witch a stale bit of bread \n"
-                        +
-                        "and since we don't have Yelp in this universe, she put a gigantic demon rat in my basement. I need an adventurer \n"
-                        +
+        System.out.println( "Murray the Barkeep: Well, all you need to know is I might have served a bog witch a stale bit of bread \n" +
+                        "and since we don't have Yelp in this universe, she put a gigantic demon rat in my basement. I need an adventurer \n" +
                         "such as yourself to clear it out.");
         System.out.println("");
         System.out.println("You examine your dirty clothes, empty stomach, and even emptier pockets and sigh.");
@@ -251,12 +235,10 @@ public class Story {
         System.out.println("Like any good adventurer, you reach down and pick it up.");
         window.cont();
 
-        System.out.println(
-                "As you lift the cloth sack into your hand and open it you see a large diamond  \n" +
+        System.out.println("As you lift the cloth sack into your hand and open it you see a large diamond  \n" +
                         "worth enough to pay for everything you will ever need! Sick.");
         System.out.println("");
-        System.out.println(
-                "You exit the basement and head back up to the tavern to collect your reward from Murray the Barkeep.");
+        System.out.println("You exit the basement and head back up to the tavern to collect your reward from Murray the Barkeep.");
         window.cont();
 
         System.out.println("Right as you walk through the door Murray the Barkeep has a look of disbelief.");
